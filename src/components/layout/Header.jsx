@@ -4,14 +4,54 @@ function Header() {
   return (
     <>
       <header className="header">
+        <header>
+          <nav className="header-nav">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Home
+            </NavLink>
 
-        <nav className="header-center-nav-container">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/resume">Resume</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-        </nav>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              About
+            </NavLink>
 
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Projects
+            </NavLink>
+
+            <NavLink
+              to="/resume"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Resume
+            </NavLink>
+
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              Contact
+            </NavLink>
+          </nav>
+        </header>
       </header>
     </>
   );
