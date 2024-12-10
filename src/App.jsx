@@ -10,7 +10,7 @@ import "./styles/layout.css";
 
 function App() {
   return (
-    <BrowserRouter basename="/kid-bayou-">
+    <BrowserRouter basename="/kid-bayou.github.io">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
