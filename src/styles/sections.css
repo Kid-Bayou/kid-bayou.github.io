@@ -1,0 +1,38 @@
+  
+  /** ~~~~~~~~~~~~~~~~~~~~~~~ CONTACT ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+  /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+  
+  .contact-container {
+    text-align: center;
+    border-radius: 8px;
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-container h2 {
+    font-size: 3.5rem;
+    color: #b49474;
+  }
+  
+  .contact-container p {
+    font-size: 1.1rem;
+  }
+  
+  .contact-button {
+    background-color: #b49474;
+    color: #ece4dc;
+    border: none;
+    padding: 1rem 1.75rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    margin-top: 4rem;
+  }
+  
+  .contact-button:hover {
+    background-color: #502c24;
+  }
+  

@@ -34,15 +34,6 @@ function Header() {
             </NavLink>
 
             <NavLink
-              to="/resume"
-              className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link"
-              }
-            >
-              Resume
-            </NavLink>
-
-            <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive ? "nav-link active" : "nav-link"

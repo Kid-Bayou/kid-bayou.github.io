@@ -19,7 +19,7 @@
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
 header {
-    height: 120px;
+    height: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +57,7 @@ header {
     width: 0;
     height: 2px;
     background-color: #b49474;
-    transition: width 0.4s ease;
+    transition: width 0.3s ease;
   }
   
   .nav-link:hover::after {
@@ -78,13 +78,35 @@ header {
   .footer {
     height: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:8vh;
+    width: auto;
   }
-  
-  .footer-copyright hr {
-    width: 95vw;
+
+  .footer-icon {
+    width: 1rem;
+    height: auto;
+    max-width: 100%;
   }
-  
+
+  .footer-icon:hover {
+    filter: brightness(0) saturate(100%) invert(51%) sepia(20%) saturate(493%) hue-rotate(353deg) brightness(100%) contrast(95%);  
+  }
+
+  .footer-icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .footer-copyright {
-    color: #f0f0f0;
+    font-size: 0.8rem;
+  }
+  
+  @media (min-width: 768px) {
+    .footer-icon {
+      width: 1.7rem; /* Larger icons for larger screens */
+    }
   }
