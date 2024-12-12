@@ -35,4 +35,17 @@
   .contact-button:hover {
     background-color: #502c24;
   }
+
+  /** ~~~~~~~~~~~~~~~~~~~~~~~ 404 ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+  /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
   
+  .FourOFour-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .image-404 {
+    width: 26rem;
+  }
