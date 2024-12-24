@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-// Import SVGs as URLs
 import githubIcon from "../../assets/icons/github.svg";
 import linkedinIcon from "../../assets/icons/linkedin.svg";
-import telegramIcon from "../../assets/icons/telegram.svg";
 import emailIcon from "../../assets/icons/email.svg";
 
 function Footer() {
@@ -16,9 +14,6 @@ function Footer() {
           </Link>
           <Link to="https://linkedin.com">
             <img src={linkedinIcon} alt="LinkedIn" className="footer-icon" />
-          </Link>
-          <Link to="https://t.me">
-            <img src={telegramIcon} alt="Telegram" className="footer-icon" />
           </Link>
           <Link to="mailto:example@example.com">
             <img src={emailIcon} alt="Email" className="footer-icon" />
