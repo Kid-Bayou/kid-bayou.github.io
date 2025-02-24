@@ -1,115 +1,174 @@
-  
-  /** ~~~~~~~~~~~~~~~~~~~~~~~ CONTACT ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-  /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-  
-  .contact-container {
-    text-align: center;
-    border-radius: 8px;
-    width: 55vw;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-container h2 {
-    font-size: 3.5rem;
-    color: #b49474;
-  }
-  
-  .contact-container p {
-    font-size: 1.1rem;
-  }
-  
-  .contact-button {
-    background-color: #b49474;
-    color: #ece4dc;
-    border: none;
-    padding: 1rem 1.75rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    font-family: "Poppins", sans-serif;
-    margin-top: 4rem;
-  }
-  
-  .contact-button:hover {
-    background-color: #502c24;
-  }
+/** ~~~~~~~~~~~~~~~~~~~~~~~ HOME ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+.home-container{
+  display: flex;
+  flex-direction: column;
+}
 
-  /** ~~~~~~~~~~~~~~~~~~~~~~~ 404 ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-  /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-  
-  .FourOFour-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  .image-404 {
-    width: 26rem;
-  }
+/** ~~~~~~~~~~~~~~~~~~~~~~~ CONTACT ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
-  /** ~~~~~~~~~~~~~~~~~~~~~~~ PROJECTS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-  /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+.contact-container {
+  text-align: center;
+  border-radius: 8px;
+  width: 55vw;
+  display: flex;
+  flex-direction: column;
+}
 
-  .projects-container{
-    margin: 3rem 7rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.contact-container h2 {
+  font-size: 3.5rem;
+  color: #b49474;
+}
 
-  .projects-image {
-    width: 100%;
-    display: block;
+.contact-container p {
+  font-size: 1.1rem;
+}
 
-  }
-  
-  .card-image{
-    margin: 0;
-  }
+.contact-button {
+  background-color: #b49474;
+  color: #ece4dc;
+  border: none;
+  padding: 1rem 1.75rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  margin-top: 4rem;
+}
 
-  .card-list {
-    display: flex;
-    gap: 40px;
-    width: 90%;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .card {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    border-radius: 15px;
-    overflow: hidden;
-    padding: 1.25rem;
-    padding-bottom: 0;
-    position: relative;
-    transition: 0.15s ease-in;
-    width: 13rem;
-  }
-  
-  .card:hover,
-  .card:focus-within {
-    transform: translateY(-5px);
-  }
-  
-  .card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-  }
+.contact-button:hover {
+  background-color: #502c24;
+}
 
-  
-  .card-footer {
-    border-top: 1px solid #b49474;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-  }
-  
+/** ~~~~~~~~~~~~~~~~~~~~~~~ 404 ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+.FourOFour-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.image-404 {
+  width: 26rem;
+}
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~ PROJECTS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+.projects-container {
+  margin: 3rem 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-image {
+  width: 100%;
+  display: block;
+}
+
+.card-image {
+  margin: 0;
+}
+
+.card-list {
+  display: flex;
+  gap: 40px;
+  width: 90%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px rgb(224, 220, 220);
+  border-radius: 0px;
+  border: solid #502c24 3.5px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  width: 20rem;
+  height: 30rem;
+  background-color: #eae3db;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  text-align: center;
+}
+
+.tech-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-bubble {
+  background-color: #502c24;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.links-container {
+  display: flex;
+}
+
+.link-button {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+}
+
+.projects-icon {
+  width: 2rem;
+}
+
+.link-button:hover {
+  opacity: 0.8;
+}
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~ ABOUT ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 80%;
+}
+
+.about-techstack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
