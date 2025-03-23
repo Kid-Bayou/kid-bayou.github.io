@@ -1,14 +1,19 @@
-
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
   background-image: url('/src/assets/images/background.png');
   background-repeat: repeat-y;
   background-size: 100% auto;
   background-attachment: fixed;
   scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-sizing: border-box;
 }
 
-:root {
-  color: #502c24;
-  background-color: #ece4dc;
+body::-webkit-scrollbar {
+  display: none;
 }
-

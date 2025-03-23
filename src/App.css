@@ -1,14 +1,19 @@
 #root {
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
   text-align: center;
   font-family: "Poppins", sans-serif;
+  color: #502c24;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
 }
+
 
 .this {
   font-family: "Poppins", sans-serif;
