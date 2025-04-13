@@ -45,7 +45,7 @@ My passion lies in web dev but I’m always eager to dive into new tools, framew
             ))}
           </div>
         </div>
-        <div>
+        <div className="about-git">
           <GitHubCalendar
             username="Kid-Bayou"
             blockSize={15}

@@ -1,7 +1,7 @@
 import React from "react";
-import Image from "../../assets/images/test.jpg";
-import sourceCode from "../../assets/icons/sourceCode.png";
-import site from "../../assets/icons/site.png";
+import Image from "../assets/images/test.jpg";
+import sourceCode from "../assets/icons/sourceCode.png";
+import site from "../assets/icons/site.png";
 
 const cardData = [
   {
@@ -15,7 +15,8 @@ const cardData = [
   },
   {
     title: "Another Project",
-    description: "Details about another project can go here. The only other difference",
+    description:
+      "Details about another project can go here. The only other difference",
     image: Image,
     technologies: ["React", "Tailwind", "Node.js"],
     liveLink: "#",

@@ -1,6 +1,6 @@
-import linkedInLogo from "../../assets/icons/linkedin.svg";
-import emailLogo from "../../assets/icons/email.svg";
-import gitHubLogo from "../../assets/icons/github.svg";
+import linkedInLogo from "../assets/icons/linkedin.svg";
+import emailLogo from "../assets/icons/email.svg";
+import gitHubLogo from "../assets/icons/github.svg";
 
 function Footer() {
   return (
@@ -10,7 +10,11 @@ function Footer() {
         <a href="mailto:example@example.com">
           <img src={emailLogo} alt="Email" className="footer-icon" />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={linkedInLogo} alt="LinkedIn" className="footer-icon" />
         </a>
         <a href="https://github.com" target="_blank" rel="noopener noreferrer">
