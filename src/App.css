@@ -1,3 +1,10 @@
+:root {
+  --color-1: #d6e8f6;
+  --color-2: #84a3d2;
+  --color-3: #4668a8;
+  --color-4: #2c4169;
+}
+
 #root {
   width: 100vw;
   height: 100vh;
@@ -5,7 +12,7 @@
   padding: 0;
   text-align: center;
   font-family: "Poppins", sans-serif;
-  color: #502c24;
+  color: var(--color-4);
 }
 
 *,
@@ -14,17 +21,16 @@
   box-sizing: border-box;
 }
 
-
 .this {
   font-family: "Poppins", sans-serif;
   font-family: "Dela Gothic One", sans-serif;
 }
 
-  /** ~~~~~~~~~~~~~~~~~~~~~~~ COLORS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-  /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~ COLORS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
 .colors {
-  color: #ece4dc;
-  color: #b49474;
-  color: #502c24;
+  color: var(--color-1);
+  color: var(--color-3);
+  color: var(--color-4);
 }

@@ -5,10 +5,6 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: auto;
-  background-image: url("src/assets/images/background.png");
-  background-repeat: repeat-y;
-  background-size: 100% auto;
-  background-attachment: fixed;
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -17,6 +13,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: repeating-linear-gradient(90deg, #bfd0e9 0, #bfd0e9 5%, transparent 0, transparent 50%), repeating-linear-gradient(180deg, #bfd0e9 0, #bfd0e9 5%, transparent 0, transparent 50%);
+  background-size: 2em 2em;
+  background-color: #ecf0f2;
 }
 
 body::-webkit-scrollbar {

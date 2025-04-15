@@ -1,6 +1,6 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~ HOME ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-.home-container{
+.home-container {
   display: flex;
   flex-direction: column;
 }
@@ -17,7 +17,7 @@
 
 .contact-container h2 {
   font-size: 3.5rem;
-  color: #b49474;
+  color: var(--color-3);
 }
 
 .contact-container p {
@@ -25,8 +25,8 @@
 }
 
 .contact-button {
-  background-color: #b49474;
-  color: #ece4dc;
+  background-color: var(--color-3);
+  color: var(--color-1);
   border: none;
   padding: 1rem 1.75rem;
   font-size: 1.2rem;
@@ -38,7 +38,7 @@
 }
 
 .contact-button:hover {
-  background-color: #502c24;
+  background-color: var(--color-4);
 }
 
 /** ~~~~~~~~~~~~~~~~~~~~~~~ 404 ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
@@ -87,7 +87,7 @@
 .card {
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px rgb(224, 220, 220);
   border-radius: 0px;
-  border: solid #502c24 3.5px;
+  border: solid var(--color-4) 3.5px;
   overflow: hidden;
   position: relative;
   transition: 0.2s ease-in-out;
@@ -117,7 +117,7 @@
 }
 
 .tech-bubble {
-  background-color: #502c24;
+  background-color: var(--color-4);
   color: white;
   padding: 5px 10px;
   border-radius: 15px;
