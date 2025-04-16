@@ -43,49 +43,49 @@ header {
   background-color: #ecf0f2;
 }
 
-.header-nav {
+.header-nav-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  gap: 40px;
-  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
 }
 
 .nav-link {
   text-decoration: none;
-  color: var(--color-4);
-  padding: 10px 15px;
-  position: relative;
-  font-size: 16px;
-  transition: color 0.3s ease;
+  color: var(--color-3);
 }
 
 .nav-link:hover {
-  color: var(--color-3);
+  color: var(--color-2);
 }
 
-.nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-3);
-  transition: width 0.3s ease;
+.active-link {
+  color: blue;
+  font-weight: bold;
 }
 
-.nav-link:hover::after {
-  width: 100%;
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
 }
 
-.nav-link.active {
-  color: var(--color-3);
+.icon {
+  font-size: 1.8rem;
+  color: gray;
+  transition: color 0.3s ease;
 }
 
-.nav-link.active::after {
-  width: 100%;
+.icon:hover {
+  color: #e63946;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
 }
 
 /** ~~~~~~~~~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~ **/

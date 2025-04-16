@@ -1,7 +1,6 @@
-import React from "react";
 import Image from "../assets/images/test.jpg";
-import sourceCode from "../assets/icons/sourceCode.png";
-import site from "../assets/icons/site.png";
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const cardData = [
   {
@@ -50,57 +49,59 @@ const cardData = [
 
 function Projects() {
   return (
-    <div className="projects-container">
-      <h1>Some of my works</h1>
-      <div className="card-list">
-        {cardData.map((card, index) => (
-          <article className="card" key={index}>
-            <figure className="card-image">
-              <img
-                src={card.image}
-                alt={card.title}
-                className="projects-image"
-              />
-            </figure>
-            <div className="card-content">
-              <div className="card-header">
-                <h3>{card.title}</h3>
-              </div>
-              <div className="card-footer">
-                <h6>{card.description}</h6>
-              </div>
+    <section id="projects">
+      <div className="projects-container">
+        <h1>Some of my works</h1>
+        <div className="card-list">
+          {cardData.map((card, index) => (
+            <article className="card" key={index}>
+              <figure className="card-image">
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="projects-image"
+                />
+              </figure>
+              <div className="card-content">
+                <div className="card-header">
+                  <h3>{card.title}</h3>
+                </div>
+                <div className="card-footer">
+                  <h6>{card.description}</h6>
+                </div>
 
-              <div className="tech-container">
-                {card.technologies.map((tech, i) => (
-                  <span key={i} className="tech-bubble">
-                    {tech}
-                  </span>
-                ))}
-              </div>
+                <div className="tech-container">
+                  {card.technologies.map((tech, i) => (
+                    <span key={i} className="tech-bubble">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
 
-              <div className="links-container">
-                <a
-                  href={card.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-button"
-                >
-                  <img src={site} className="projects-icon" />
-                </a>
-                <a
-                  href={card.sourceCode}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-button"
-                >
-                  <img src={sourceCode} className="projects-icon" />
-                </a>
+                <div className="links-container">
+                  <a
+                    href={card.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-button"
+                  >
+                    <OpenInNewIcon className="projects-icon" />
+                  </a>
+                  <a
+                    href={card.sourceCode}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-button"
+                  >
+                    <GitHubIcon className="projects-icon" />
+                  </a>
+                </div>
               </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

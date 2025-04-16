@@ -1,9 +1,6 @@
-
-
 function About() {
-
   return (
-    <>
+    <section id="about">
       <div className="about-container">
         <div>
           <h2>A little about me</h2>
@@ -18,7 +15,7 @@ function About() {
           </p>
         </div>
       </div>
-    </>
+    </section>
   );
 }
 
