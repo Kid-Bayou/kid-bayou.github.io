@@ -26,17 +26,12 @@ main {
 
 header {
   height: 12vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 70px;
-  margin-right: 70px;
-}
-
-.sticky {
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 1000;
   background: repeating-linear-gradient(90deg, #bfd0e9 0, #bfd0e9 5%, transparent 0, transparent 50%), repeating-linear-gradient(180deg, #bfd0e9 0, #bfd0e9 5%, transparent 0, transparent 50%);
   background-size: 2em 2em;
@@ -45,8 +40,9 @@ header {
 
 .header-nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .nav-links {
@@ -75,12 +71,12 @@ header {
 
 .icon {
   font-size: 1.8rem;
-  color: gray;
+  color: var(--color-3);
   transition: color 0.3s ease;
 }
 
 .icon:hover {
-  color: #e63946;
+  color: var(--color-2);
 }
 
 .icon-link {
@@ -98,24 +94,6 @@ header {
   align-items: center;
   height: 8vh;
   width: auto;
-}
-
-.footer-icon {
-  width: 1rem;
-  height: auto;
-  max-width: 100%;
-}
-
-.footer-icon:hover {
-  filter: brightness(0) saturate(100%) invert(51%) sepia(20%) saturate(493%)
-    hue-rotate(353deg) brightness(100%) contrast(95%);
-}
-
-.footer-icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
 }
 
 .footer-copyright {
