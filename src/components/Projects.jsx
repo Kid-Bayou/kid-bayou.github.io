@@ -6,7 +6,7 @@ const cardData = [
   {
     title: "This Site",
     description:
-      "Why was this site built. And other extra information. To be added.",
+      "Why was this site built. And other extra information. To be added. What would happen if I added more and more, huh? Yup add and add. Just like that. Okay then. Is this enough? Yep, I think so.",
     image: Image,
     technologies: ["HTML", "CSS", "JavaScript"],
     liveLink: "#",
@@ -14,8 +14,7 @@ const cardData = [
   },
   {
     title: "Another Project",
-    description:
-      "Details about another project can go here. The only other difference",
+    description: "Details about another project can go here. The only other difference",
     image: Image,
     technologies: ["React", "Tailwind", "Node.js"],
     liveLink: "#",
@@ -45,6 +44,14 @@ const cardData = [
     liveLink: "#",
     sourceCode: "#",
   },
+  {
+    title: "Another Project",
+    description: "Details about another project can go here.",
+    image: Image,
+    technologies: ["Angular", "TypeScript", "MongoDB"],
+    liveLink: "#",
+    sourceCode: "#",
+  },
 ];
 
 function Projects() {
@@ -54,50 +61,29 @@ function Projects() {
         <h1>Some of my works</h1>
         <div className="card-list">
           {cardData.map((card, index) => (
-            <article className="card" key={index}>
-              <figure className="card-image">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="projects-image"
-                />
-              </figure>
+            <div className="card" key={index}>
+              <a href={card.image} target="_blank" rel="noopener noreferrer">
+                <img src={card.image} alt={card.title} className="card-image" />
+              </a>
               <div className="card-content">
-                <div className="card-header">
-                  <h3>{card.title}</h3>
-                </div>
-                <div className="card-footer">
-                  <h6>{card.description}</h6>
-                </div>
-
+                <h3 className="card-title">{card.title}</h3>
+                
+                <p className="card-description">{card.description}</p>
                 <div className="tech-container">
                   {card.technologies.map((tech, i) => (
-                    <span key={i} className="tech-bubble">
-                      {tech}
-                    </span>
+                    <span key={i} className="tech-bubble">{tech}</span>
                   ))}
                 </div>
-
                 <div className="links-container">
-                  <a
-                    href={card.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-button"
-                  >
+                  <a href={card.liveLink} target="_blank" rel="noopener noreferrer" className="link-button">
                     <OpenInNewIcon className="projects-icon" />
                   </a>
-                  <a
-                    href={card.sourceCode}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-button"
-                  >
+                  <a href={card.sourceCode} target="_blank" rel="noopener noreferrer" className="link-button">
                     <GitHubIcon className="projects-icon" />
                   </a>
                 </div>
               </div>
-            </article>
+            </div>
           ))}
         </div>
       </div>
