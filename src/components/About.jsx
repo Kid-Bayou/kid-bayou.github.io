@@ -5,7 +5,7 @@ function About() {
   return (
     <section id="about" className="about-section">
       <div>
-        <h2>A little about me</h2>
+        <h1 className='about-h1'>a little about me</h1>
         <p>
           Hey there, I’m Kidist. I have my Bachelor’s degree in Software
           Engineering and currently pursuing my Master’s to deepen my technical

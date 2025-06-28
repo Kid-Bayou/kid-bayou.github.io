@@ -1,9 +1,52 @@
+
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~ COLORS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
 :root {
-  --color-1: #d6e8f6;
-  --color-2: #84a3d2;
-  --color-3: #4668a8;
-  --color-4: #2c4169;
+  --color-1: #f6f5f1;
+  --color-2: #c6c5c2;
+  --color-3: #969593;
+  --color-4: #666564;
+  --color-5: #353534;
 }
+
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~ COLORS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+
+.this {
+  font-family: "Poppins", sans-serif;
+  font-family: "Dela Gothic One", sans-serif;
+}
+
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-1);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 #root {
   width: 100vw;
@@ -12,7 +55,7 @@
   padding: 0;
   text-align: center;
   font-family: "Poppins", sans-serif;
-  color: var(--color-4);
+  color: var(--color-5);
 }
 
 *,
@@ -21,16 +64,3 @@
   box-sizing: border-box;
 }
 
-.this {
-  font-family: "Poppins", sans-serif;
-  font-family: "Dela Gothic One", sans-serif;
-}
-
-/** ~~~~~~~~~~~~~~~~~~~~~~~ COLORS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-
-.colors {
-  color: var(--color-1);
-  color: var(--color-3);
-  color: var(--color-4);
-}

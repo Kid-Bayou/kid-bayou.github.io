@@ -13,9 +13,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: repeating-linear-gradient(90deg, #bfd0e9 0, #bfd0e9 5%, transparent 0, transparent 50%), repeating-linear-gradient(180deg, #bfd0e9 0, #bfd0e9 5%, transparent 0, transparent 50%);
-  background-size: 2em 2em;
-  background-color: #ecf0f2;
 }
 
 body::-webkit-scrollbar {

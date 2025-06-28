@@ -1,66 +1,83 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~ HOME ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-.home-container {
+.home-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  
 }
 
-/** ~~~~~~~~~~~~~~~~~~~~~~~ CONTACT ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+.home-h1 {
+  font-family: "Dela Gothic One", sans-serif
+}
+
+.rotating-svg {
+  animation: spin 4s linear infinite;
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~ ABOUT ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-
-.contact-container {
+.about-section {
+  width: 80vw;
+  padding: 4rem 2rem;
   text-align: center;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  width: 60vw;
 }
 
-.contact-container h2 {
-  font-size: 3.5rem;
-  color: var(--color-3);
+.about-h1 {
+  font-family: "Dela Gothic One", sans-serif
 }
 
-.contact-container p {
-  font-size: 1.1rem;
-}
-
-.contact-button {
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: white;
   background-color: var(--color-3);
-  color: var(--color-1);
-  border: none;
-  padding: 1rem 1.75rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 4px;
+  border-radius: 0.5rem;
+  text-decoration: none;
   transition: background-color 0.3s ease;
-  font-family: "Poppins", sans-serif;
-  margin-top: 4rem;
+  font-weight: 500;
 }
 
-.contact-button:hover {
-  background-color: var(--color-4);
+.resume-link:hover {
+  background-color: var(--color-2);
 }
+
 
 
 /** ~~~~~~~~~~~~~~~~~~~~~~~ PROJECTS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
 .projects-container {
-  width: 90vw;
+  width: 80vw;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+.projects-header {
+  font-family: "Dela Gothic One", sans-serif
 }
 
 .card-list {
   column-count: 1;
-  column-gap: 1.5rem;
+  column-gap: 1.4rem;
 }
 
 
@@ -133,16 +150,17 @@ h1 {
   text-decoration: none;
   font-weight: bold;
   font-size: 0.9rem;
-  color: #1a73e8;
-  border: 1px solid #1a73e8;
+  color: var(--color-4);
+  border: 1px solid var(--color-4);
   padding: 0.3rem 0.75rem;
   border-radius: 0.3rem;
   transition: background 0.2s;
 }
 
 .link-button:hover {
-  background-color: #1a73e8;
-  color: white;
+  background-color: var(--color-3);
+  color: var(--color-1);
+  border: var(--color-3);
 }
 
 .projects-icon {
@@ -161,29 +179,68 @@ h1 {
   }
 }
 
-/** ~~~~~~~~~~~~~~~~~~~~~~~ ABOUT ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~ CONTACT ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-.about-section {
-  padding: 4rem 2rem;
+
+.contact-container {
   text-align: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
 }
 
-.resume-link {
-  display: inline-flex;
-  align-items: center;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  color: white;
+.contact-header {
+  font-family: "Dela Gothic One", sans-serif;
+}
+
+.contact-container p {
+  font-size: 1.1rem;
+}
+
+.contact-button {
   background-color: var(--color-3);
-  border-radius: 0.5rem;
-  text-decoration: none;
+  color: var(--color-1);
+  border: none;
+  padding: 1rem 1.75rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
   transition: background-color 0.3s ease;
-  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  margin-top: 4rem;
 }
 
-.resume-link:hover {
-  background-color: var(--color-2);
+.contact-button:hover {
+  background-color: var(--color-4);
+}
+
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~ CANVAS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+
+canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+
+canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /** ~~~~~~~~~~~~~~~~~~~~~~~ MEDIA QUERY ~~~~~~~~~~~~~~~~~~~~~~~~~ **/

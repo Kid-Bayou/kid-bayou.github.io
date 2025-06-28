@@ -3,11 +3,26 @@
 
 .site-wrapper {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  width: 100vw;
   gap: 200px;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 90vw;
 }
 
 main {
@@ -25,7 +40,7 @@ main {
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
 header {
-  height: 12vh;
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -33,9 +48,8 @@ header {
   position: fixed;
   top: 0;
   z-index: 1000;
-  background: repeating-linear-gradient(90deg, #bfd0e9 0, #bfd0e9 5%, transparent 0, transparent 50%), repeating-linear-gradient(180deg, #bfd0e9 0, #bfd0e9 5%, transparent 0, transparent 50%);
-  background-size: 2em 2em;
-  background-color: #ecf0f2;
+  background-color: var(--color-1);
+  font-weight: 500;
 }
 
 .header-nav-container {
@@ -52,11 +66,11 @@ header {
 
 .nav-link {
   text-decoration: none;
-  color: var(--color-3);
+  color: var(--color-5);
 }
 
 .nav-link:hover {
-  color: var(--color-2);
+  color: var(--color-3);
 }
 
 .active-link {
@@ -71,12 +85,12 @@ header {
 
 .icon {
   font-size: 1.8rem;
-  color: var(--color-3);
+  color: var(--color-5);
   transition: color 0.3s ease;
 }
 
 .icon:hover {
-  color: var(--color-2);
+  color: var(--color-3);
 }
 
 .icon-link {
