@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -8,10 +9,10 @@ function Header({ activeSection }) {
       <nav className="header-nav-container">
         <div className="nav-links">
           {[
-            { id: "home", label: "Home" },
-            { id: "about", label: "About" },
-            { id: "projects", label: "Projects" },
-            { id: "contact", label: "Contact" },
+            { id: "home", label: "home" },
+            { id: "about", label: "about" },
+            { id: "projects", label: "projects" },
+            { id: "contact", label: "contact" },
           ].map(({ id, label }) => (
             <a
               key={id}
@@ -38,5 +39,9 @@ function Header({ activeSection }) {
     </header>
   );
 }
+
+Header.propTypes = {
+  activeSection: PropTypes.string,
+};
 
 export default Header;

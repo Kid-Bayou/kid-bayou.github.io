@@ -9,7 +9,7 @@
   align-items: center;
   min-height: 100vh;
   width: 100vw;
-  gap: 200px;
+  overflow-x: hidden;
 }
 
 .content-wrapper {
@@ -30,17 +30,33 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: 200px;
-  gap: 150px;
+  margin-top: 8vh;
   width: 90vw;
+}
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~ SECTIONS (shared) ~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+section {
+  width: min(90vw, 1100px);
+  min-height: 92vh;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section + section {
+  border-top: 1px solid rgba(100, 100, 100, 0.2);
 }
 
 /** ~~~~~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
 header {
-  height: 10vh;
+  height: 8vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -50,6 +66,7 @@ header {
   z-index: 1000;
   background-color: var(--color-1);
   font-weight: 500;
+  border: 1px solid rgba(100, 100, 100, 0.2);
 }
 
 .header-nav-container {
@@ -102,12 +119,12 @@ header {
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
 .footer {
-  height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 8vh;
   width: auto;
+  margin-top: 5rem;
 }
 
 .footer-copyright {
@@ -117,5 +134,76 @@ header {
 @media (min-width: 768px) {
   .footer-icon {
     width: 1.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-link {
+    font-size: 0.85rem;
+  }
+  .social-icons {
+    gap: 0.75rem;
+  }
+  .icon {
+    font-size: 1.4rem;
+  }
+}
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~ STALK DECORATIONS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+.stalks-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 4vw;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stalks-left {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(0.5rem, 1.5vw, 2rem);
+}
+
+.stalk {
+  height: clamp(220px, 48vh, 580px);
+  width: auto;
+  display: block;
+}
+
+.stalk-1 {
+  height: clamp(340px, 72vh, 820px);
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .stalk {
+    height: clamp(180px, 40vh, 400px);
+  }
+  .stalk-1 {
+    height: clamp(280px, 62vh, 580px);
+  }
+}
+
+@media (max-width: 600px) {
+  .stalk-2 {
+    display: none;
+  }
+  .stalk {
+    height: clamp(120px, 30vh, 220px);
+  }
+  .stalk-1 {
+    height: clamp(180px, 46vh, 340px);
+  }
+  .stalks-wrapper {
+    padding: 0 3vw;
   }
 }

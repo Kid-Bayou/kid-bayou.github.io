@@ -1,44 +1,31 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~ HOME ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
 .home-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding-top: 5rem;
-  
 }
 
 .home-h1 {
-  font-family: "Dela Gothic One", sans-serif
+  font-family: "Dela Gothic One", sans-serif;
 }
 
 .rotating-svg {
   animation: spin 4s linear infinite;
-  width: 100px;
-  height: 100px;
+  width: clamp(60px, 10vw, 100px);
+  height: clamp(60px, 10vw, 100px);
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 
 /** ~~~~~~~~~~~~~~~~~~~~~~~ ABOUT ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-.about-section {
-  width: 80vw;
-  padding: 4rem 2rem;
-  text-align: center;
-}
 
 .about-h1 {
-  font-family: "Dela Gothic One", sans-serif
+  font-family: "Dela Gothic One", sans-serif;
 }
 
 .resume-link {
@@ -60,26 +47,21 @@
 }
 
 
-
 /** ~~~~~~~~~~~~~~~~~~~~~~~ PROJECTS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
 .projects-container {
-  width: 80vw;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  width: 100%;
 }
 
 .projects-header {
-  font-family: "Dela Gothic One", sans-serif
+  font-family: "Dela Gothic One", sans-serif;
 }
 
 .card-list {
   column-count: 1;
   column-gap: 1.4rem;
 }
-
 
 .card {
   break-inside: avoid;
@@ -127,7 +109,7 @@
   color: white;
   padding: 0.25rem 0.6rem;
   font-size: 0.75rem;
-  border-radius: 0.3rem ;
+  border-radius: 0.3rem;
   text-transform: uppercase;
 }
 
@@ -167,16 +149,12 @@
   font-size: 1rem;
 }
 
-@media (min-width: 768px) {
-  .card-list {
-    column-count: 2;
-  }
+@media (min-width: 600px) {
+  .card-list { column-count: 2; }
 }
 
-@media (min-width: 1024px) {
-  .card-list {
-    column-count: 3;
-  }
+@media (min-width: 960px) {
+  .card-list { column-count: 3; }
 }
 
 
@@ -184,11 +162,10 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
 .contact-container {
-  text-align: center;
-  border-radius: 8px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 60vw;
+  align-items: center;
 }
 
 .contact-header {
@@ -220,7 +197,6 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~ CANVAS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
-
 canvas {
   position: absolute !important;
   top: 0;
@@ -230,31 +206,3 @@ canvas {
   z-index: 0;
   pointer-events: none;
 }
-
-
-
-canvas {
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/** ~~~~~~~~~~~~~~~~~~~~~~~ MEDIA QUERY ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-
-@media (max-width: 900px) {
-  .card-list {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .card-list {
-    column-count: 1;
-  }
-}
-
