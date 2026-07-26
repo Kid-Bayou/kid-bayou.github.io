@@ -1,21 +1,7 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import Dandelion from "./Dandelion";
-
-function usePrefersReducedMotion() {
-  const [reduced, setReduced] = useState(
-    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  );
-
-  useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const onChange = (e) => setReduced(e.matches);
-    query.addEventListener("change", onChange);
-    return () => query.removeEventListener("change", onChange);
-  }, []);
-
-  return reduced;
-}
+import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
 
 function MouseTracker({ mouseWorld }) {
   useEffect(() => {

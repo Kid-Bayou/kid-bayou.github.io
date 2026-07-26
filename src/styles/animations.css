@@ -3,8 +3,9 @@
 
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(26px);
+  transition: opacity 0.82s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.82s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.is-visible {
@@ -12,9 +13,85 @@
   transform: translateY(0);
 }
 
-.reveal-fade {
-  transform: none;
-  transition: opacity 0.6s ease-out;
+/** ~~~~~~~~~~~~~~~~~~~~~~~ HERO ENTRANCE ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+@keyframes heroIn {
+  from {
+    opacity: 0;
+    transform: scale(0.6) rotate(-25deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes heroWord {
+  from {
+    opacity: 0;
+    transform: translateY(32px) skewY(4deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) skewY(0);
+  }
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-icon-wrap {
+  opacity: 0;
+  animation: heroIn 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+  animation: heroWord 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-word:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.hero-word:nth-child(2) {
+  animation-delay: 0.72s;
+}
+
+.hero-word:nth-child(3) {
+  animation-delay: 0.94s;
+}
+
+.hero-paragraph {
+  opacity: 0;
+  animation: heroFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.2s both;
+}
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~ CARD ENTRANCE ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+.card-reveal {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /** ~~~~~~~~~~~~~~~~~~~~~~~ STALK ENTRANCE ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
@@ -53,8 +130,16 @@
 
 @media (prefers-reduced-motion: reduce) {
   .reveal,
-  .reveal-fade {
+  .card-reveal {
     transition: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-icon-wrap,
+  .hero-word,
+  .hero-paragraph {
+    animation: none;
     opacity: 1;
     transform: none;
   }
@@ -66,6 +151,7 @@
   }
 
   .card:hover,
+  .card:hover .card-image,
   .nav-link:hover,
   .icon-link:hover,
   .resume-link:hover,
@@ -75,7 +161,8 @@
   }
 
   .mobile-nav-menu,
-  .nav-toggle-bar {
+  .nav-toggle-bar,
+  .skip-link {
     transition: none;
   }
 }

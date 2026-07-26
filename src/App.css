@@ -4,17 +4,18 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
 :root {
-  --color-1: #f6f5f1;
-  --color-2: #c6c5c2;
-  --color-3: #969593;
-  --color-4: #666564;
-  --color-5: #353534;
+  --color-1: #f0ede8;
+  --color-4: #6b6560;
+  --color-4-dark: #5a5652;
+  --color-5: #2d2926;
+  --color-5-rgb: 45, 41, 38;
 
   --section-padding-y: 2rem;
   --heading-hero-size: clamp(2.75rem, 2rem + 3.5vw, 4.75rem);
   --heading-section-size: clamp(2.25rem, 1.7rem + 2.5vw, 3.5rem);
   --heading-line-height: 1.15;
-  --body-font-size: 1.3rem;
+  --body-font-size: clamp(15px, 1.5vw, 17px);
+  --body-line-height: 1.78;
   --card-font-size: 1rem;
 }
 
@@ -52,7 +53,7 @@ body::-webkit-scrollbar {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif;
   color: var(--color-5);
 }
 
@@ -68,7 +69,28 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 0;
+  z-index: 10000;
+  background-color: var(--color-5);
+  color: var(--color-1);
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0 0 0.3rem 0;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 p {
   font-size: var(--body-font-size);
+  font-weight: 400;
+  line-height: var(--body-line-height);
+  margin: 0 0 2.5rem;
 }
 

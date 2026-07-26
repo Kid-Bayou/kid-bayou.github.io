@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import StalksDecoration from "./components/StalksDecoration";
+import CustomCursor from "./components/CustomCursor";
 
 const DandelionScene = lazy(() => import("./components/DandelionScene"));
 
@@ -14,6 +15,7 @@ import "./App.css";
 import "./styles/layout.css";
 import "./styles/sections.css";
 import "./styles/animations.css";
+import "./styles/cursor.css";
 
 function App() {
   useEffect(() => {
@@ -31,14 +33,16 @@ function App() {
 
   return (
     <>
+      <a href="#main-content" className="skip-link">Skip to main content</a>
+      <CustomCursor />
       <div className="site-wrapper">
-          <Suspense fallback={null}>
-            <DandelionScene />
-          </Suspense>
-          <StalksDecoration />
+        <Suspense fallback={null}>
+          <DandelionScene />
+        </Suspense>
+        <StalksDecoration />
         <div className="content-wrapper">
           <Header />
-          <main>
+          <main id="main-content">
             <Home />
             <About />
             <Projects />

@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import EmailIcon from "@mui/icons-material/Email";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import { EmailIcon, LinkedInIcon, GitHubIcon } from "./Icons";
 
 const NAV_ITEMS = [
   { id: "home", label: "home" },
@@ -10,8 +8,11 @@ const NAV_ITEMS = [
   { id: "contact", label: "contact" },
 ];
 
+const SCROLL_THRESHOLD = 24;
+
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef(null);
 
   useEffect(() => {
@@ -37,8 +38,27 @@ function Header() {
     };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    function handleScroll() {
+      const scrollY = Math.max(
+        window.scrollY || 0,
+        document.documentElement.scrollTop || 0,
+        document.body.scrollTop || 0
+      );
+      setIsScrolled(scrollY > SCROLL_THRESHOLD);
+    }
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    document.body.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.body.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? "is-scrolled" : ""}`}>
       <nav className="header-nav-container" ref={navRef}>
         <div className="nav-links">
           {NAV_ITEMS.map(({ id, label }) => (
@@ -97,6 +117,7 @@ function Header() {
         <div
           id="mobile-nav-menu"
           className={`mobile-nav-menu ${isMenuOpen ? "is-open" : ""}`}
+          aria-hidden={!isMenuOpen}
         >
           <div className="mobile-nav-menu-inner">
             {NAV_ITEMS.map(({ id, label }) => (
@@ -104,6 +125,7 @@ function Header() {
                 key={id}
                 href={`#${id}`}
                 className="mobile-nav-link"
+                tabIndex={isMenuOpen ? 0 : -1}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {label}

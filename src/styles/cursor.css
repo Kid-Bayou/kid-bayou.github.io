@@ -1,0 +1,46 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~ CUSTOM CURSOR ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+#cursor,
+#cursor-ring {
+  display: none;
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+#cursor {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-5);
+  z-index: 9999;
+  transition: width 0.22s ease, height 0.22s ease;
+  mix-blend-mode: multiply;
+}
+
+#cursor-ring {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid rgba(var(--color-5-rgb), 0.45);
+  z-index: 9998;
+  transition: width 0.28s ease, height 0.28s ease;
+}
+
+/* Only takes effect once JS confirms a mouse (fine pointer + hover) is present. */
+body.custom-cursor-active {
+  cursor: none;
+}
+
+body.custom-cursor-active #cursor,
+body.custom-cursor-active #cursor-ring {
+  display: block;
+}
+
+body.custom-cursor-active a,
+body.custom-cursor-active button,
+body.custom-cursor-active .card {
+  cursor: none;
+}
