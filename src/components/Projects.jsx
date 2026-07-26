@@ -1,6 +1,7 @@
 import Image from "../assets/images/test.jpg";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Reveal from "./Reveal";
 
 const cardData = [
   {
@@ -58,16 +59,16 @@ function Projects() {
   return (
     <section id="projects">
       <div className="projects-container">
-        <h1 className="projects-header">some of my works</h1>
+        <Reveal as="h2" className="projects-header">selected work</Reveal>
         <div className="card-list">
           {cardData.map((card, index) => (
-            <div className="card" key={index}>
+            <Reveal as="div" className="card" delay={Math.min(index * 80, 400)} key={index}>
               <a href={card.image} target="_blank" rel="noopener noreferrer">
-                <img src={card.image} alt={card.title} className="card-image" />
+                <img src={card.image} alt={card.title} className="card-image" loading="lazy" />
               </a>
               <div className="card-content">
                 <h3 className="card-title">{card.title}</h3>
-                
+
                 <p className="card-description">{card.description}</p>
                 <div className="tech-container">
                   {card.technologies.map((tech, i) => (
@@ -75,15 +76,29 @@ function Projects() {
                   ))}
                 </div>
                 <div className="links-container">
-                  <a href={card.liveLink} target="_blank" rel="noopener noreferrer" className="link-button">
+                  <a
+                    href={card.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-button"
+                    aria-label={`View live site for ${card.title}`}
+                    title={`View live site for ${card.title}`}
+                  >
                     <OpenInNewIcon className="projects-icon" />
                   </a>
-                  <a href={card.sourceCode} target="_blank" rel="noopener noreferrer" className="link-button">
+                  <a
+                    href={card.sourceCode}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-button"
+                    aria-label={`View source code for ${card.title}`}
+                    title={`View source code for ${card.title}`}
+                  >
                     <GitHubIcon className="projects-icon" />
                   </a>
                 </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -1,8 +1,10 @@
+import Reveal from "./Reveal";
+
 function Contact() {
   return (
     <section id="contact">
       <div className="contact-container">
-        <h1 className="contact-header">let’s connect</h1>
+        <Reveal as="h2" className="contact-header">let’s connect</Reveal>
         <p>
           I’m always open to exploring exciting opportunities and
           collaborations. Whether you want to discuss a project, ask a question,

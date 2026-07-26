@@ -40,7 +40,7 @@ main {
 section {
   width: min(90vw, 1100px);
   min-height: 92vh;
-  padding: 2rem 0;
+  padding: var(--section-padding-y) 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,7 +56,7 @@ section + section {
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
 header {
-  height: 8vh;
+  height: 9vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -82,37 +82,81 @@ header {
 }
 
 .nav-link {
+  font-size: 1.1rem;
   text-decoration: none;
   color: var(--color-5);
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-link:hover {
-  color: var(--color-3);
-}
-
-.active-link {
-  color: blue;
-  font-weight: bold;
+  color: var(--color-2);
+  transform: translateY(-1px);
 }
 
 .social-icons {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .icon {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   color: var(--color-5);
   transition: color 0.3s ease;
 }
 
 .icon:hover {
-  color: var(--color-3);
+  color: var(--color-4);
 }
 
 .icon-link {
   display: flex;
   align-items: center;
+  padding: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.icon-link:hover {
+  transform: translateY(-2px);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+  background-color: var(--color-5);
+  border-radius: 0.3rem;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.nav-toggle.is-open .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-open .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.is-open .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-nav-menu {
+  display: none;
 }
 
 /** ~~~~~~~~~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
@@ -128,28 +172,78 @@ header {
 }
 
 .footer-copyright {
-  font-size: 0.8rem;
-}
-
-@media (min-width: 768px) {
-  .footer-icon {
-    width: 1.7rem;
-  }
+  font-size: 0.85rem;
 }
 
 @media (max-width: 600px) {
+  .header-nav-container {
+    justify-content: space-between;
+    padding: 0 5vw;
+  }
+
   .nav-links {
-    gap: 1rem;
+    display: none;
   }
-  .nav-link {
-    font-size: 0.85rem;
-  }
+
   .social-icons {
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
   .icon {
     font-size: 1.4rem;
   }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .mobile-nav-menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    position: fixed;
+    top: 8vh;
+    left: 0;
+    width: 100%;
+    max-width: 100vw;
+    background-color: var(--color-1);
+    border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: grid-template-rows 0.35s ease, opacity 0.25s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  .mobile-nav-menu.is-open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-nav-menu-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    min-height: 0;
+    padding: 0.5rem 0 1rem;
+  }
+
+  .mobile-nav-link {
+    text-decoration: none;
+    color: var(--color-5);
+    width: 100%;
+    text-align: center;
+    padding: 0.85rem 0;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link:focus-visible {
+    color: var(--color-4);
+  }
+
 }
 
 /** ~~~~~~~~~~~~~~~~~~~~~~~ STALK DECORATIONS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/

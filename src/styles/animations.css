@@ -1,0 +1,81 @@
+/** ~~~~~~~~~~~~~~~~~~~~~~~ SCROLL REVEAL ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-fade {
+  transform: none;
+  transition: opacity 0.6s ease-out;
+}
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~ STALK ENTRANCE ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+.stalk {
+  opacity: 0;
+  animation: stalk-rise 0.8s ease-out forwards;
+}
+
+.stalk-1 {
+  animation-delay: 0.1s;
+}
+
+.stalk-2 {
+  animation-delay: 0.25s;
+}
+
+.stalk-3 {
+  animation-delay: 0.1s;
+}
+
+@keyframes stalk-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/** ~~~~~~~~~~~~~~~~~~~~~~~ REDUCED MOTION ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-fade {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .stalk {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .card:hover,
+  .nav-link:hover,
+  .icon-link:hover,
+  .resume-link:hover,
+  .link-button:hover,
+  .contact-button:hover {
+    transform: none;
+  }
+
+  .mobile-nav-menu,
+  .nav-toggle-bar {
+    transition: none;
+  }
+}

@@ -9,21 +9,19 @@
   --color-3: #969593;
   --color-4: #666564;
   --color-5: #353534;
+
+  --section-padding-y: 2rem;
+  --heading-hero-size: clamp(2.75rem, 2rem + 3.5vw, 4.75rem);
+  --heading-section-size: clamp(2.25rem, 1.7rem + 2.5vw, 3.5rem);
+  --heading-line-height: 1.15;
+  --body-font-size: 1.3rem;
+  --card-font-size: 1rem;
 }
 
 
 /** ~~~~~~~~~~~~~~~~~~~~~~~ COLORS ~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
-
-.this {
-  font-family: "Poppins", sans-serif;
-  font-family: "Dela Gothic One", sans-serif;
-}
-
-
-/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
-/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/
 
 html,
 body {
@@ -62,5 +60,15 @@ body::-webkit-scrollbar {
 *:after,
 *:before {
   box-sizing: border-box;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-5);
+  outline-offset: 2px;
+}
+
+p {
+  font-size: var(--body-font-size);
 }
 

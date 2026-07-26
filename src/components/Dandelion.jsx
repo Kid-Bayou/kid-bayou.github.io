@@ -28,7 +28,7 @@ class SVGCanvasLoader extends THREE.Loader {
   }
 }
 
-function Dandelion({ initialPosition, mouseWorld }) {
+function Dandelion({ initialPosition, mouseWorld, reducedMotion }) {
   const ref = useRef();
   const texture = useLoader(SVGCanvasLoader, seedUrl);
   const { viewport } = useThree();
@@ -50,7 +50,7 @@ function Dandelion({ initialPosition, mouseWorld }) {
   }, [initialPosition]);
 
   useFrame((state) => {
-    if (!ref.current) return;
+    if (!ref.current || reducedMotion) return;
     const p = ref.current.position;
 
     ref.current.rotation.z =
